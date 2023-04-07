@@ -92,3 +92,4 @@ Plot with average number of steps by interval, plot separately for weekedays and
 ```{r message=FALSE,warning=FALSE}
  imputed_df %>% group_by (interval, tow) %>% summarise(steps=mean(steps)) %>% ggplot(., aes(x=interval, y=steps)) + geom_line() + ylab("Average number of steps") + facet_grid(rows = vars(tow)) 
 ``` 
+
